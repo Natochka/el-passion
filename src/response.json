@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "published": "19-07-2016",
+      "data": ["Page changes", "Review of last issues"]
+    },
+    {
+      "published": "18-07-2016",
+      "data": ["Visual UI Update Review", "Sidebar changes"]
+    },
+    {
+      "published": "15-07-2016",
+      "data": ["Crash update", "Page visual UI Update Review", "Sidebar update"]
+    },
+    {
+      "published": "14-07-2016",
+      "data": ["Crash issue", "Visual update & Crush resolve"]
+    }
+  ]
+}

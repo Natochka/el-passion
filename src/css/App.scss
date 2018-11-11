@@ -1,0 +1,146 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.page {
+  background: url('../img/background.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 650px;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  letter-spacing: 0.1px;
+}
+
+/* Navbar */
+.navbar-wrapper {
+  width: 150px;
+  background-color: rgba(16, 16, 34, 0.95);
+  color: #fff;
+}
+
+.navbar-header {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.navbar-header-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.navbar-header-circle-red {
+  background-color: #ff594f;
+}
+
+.navbar-header-circle-yellow {
+  background-color: #ffbc1b;
+}
+
+.navbar-header-circle-green {
+  background-color: #00cd46;
+}
+
+.navbar-list-item {
+  list-style: none;
+  display: flex;
+  padding: 17px 15px;
+  font-size: 14px;
+  &:before {
+    display: inline-block;
+    content: ' ';
+    height: 16px;
+    width: 16px;
+    margin-right: 10px;
+  }
+  &.active {
+    background-color: rgba(41, 42, 72, 0.9);
+  }
+}
+
+.navbar-list-all:before {
+  background-image: url('../img/icon-github.svg');
+}
+
+.navbar-list-open:before {
+  background-image: url('../img/icon-open-issue.svg');
+}
+
+.navbar-list-closed:before {
+  background-image: url('../img/icon-closed-issue.svg');
+}
+
+.navbar-list-item-name {
+  flex: 1;
+}
+
+.navbar-list-item-count {
+  opacity: 0.7;
+}
+
+/* Content */
+.content-wrapper {
+  padding: 10px 19px 10px 15px;
+  flex: 1;
+  overflow-y: scroll;
+  background-color: #f6f6f6;
+}
+
+.content-block {
+  margin-bottom: 10px;
+}
+
+.content-date {
+  color: #8a8995;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.issue {
+  color: #000;
+  font-size: 15px;
+  line-height: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 0 11px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:first-child .icon-star {
+    fill: #080606;
+    stroke: #080606;
+  }
+}
+
+.icon-star {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+  stroke: #e5e5e5;
+  stroke-width: 1;
+  &:hover {
+    fill: #080606;
+    stroke: #080606;
+  }
+}
