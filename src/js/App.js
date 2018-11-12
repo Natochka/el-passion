@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/App.scss'
+import '../scss/App.scss'
 import Content from './Content'
 import Navbar from './Navbar'
 

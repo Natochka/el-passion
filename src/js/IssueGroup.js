@@ -3,6 +3,8 @@ import { array } from 'prop-types'
 import Issue from './Issue'
 
 function IssueGroup({ data }) {
+  if (!data) return null
+
   return (
     <div className="issue-group">
       {data.map(item => (

@@ -3,8 +3,7 @@ body {
 }
 
 .page {
-  background: url('../img/background.jpg');
-  background-size: cover;
+  background: url('../img/background.jpg') center/cover;
   height: 100vh;
 }
 
@@ -23,21 +22,15 @@ body {
   letter-spacing: 0.1px;
 }
 
-/* Navbar */
-.navbar-wrapper {
-  width: 150px;
-  background-color: rgba(16, 16, 34, 0.95);
-  color: #fff;
-}
-
-.navbar-header {
+/* BarButtons */
+.bar-buttons {
   height: 40px;
   display: flex;
   align-items: center;
   padding: 0 15px;
 }
 
-.navbar-header-circle {
+.bar-button {
   width: 10px;
   height: 10px;
   border-radius: 10px;
@@ -45,16 +38,23 @@ body {
   cursor: pointer;
 }
 
-.navbar-header-circle-red {
+.bar-button--red {
   background-color: #ff594f;
 }
 
-.navbar-header-circle-yellow {
+.bar-button--yellow {
   background-color: #ffbc1b;
 }
 
-.navbar-header-circle-green {
+.bar-button--green {
   background-color: #00cd46;
+}
+
+/* Navbar */
+.navbar-wrapper {
+  width: 150px;
+  background-color: rgba(16, 16, 34, 0.95);
+  color: #fff;
 }
 
 .navbar-list-item {
@@ -72,26 +72,24 @@ body {
   &.active {
     background-color: rgba(41, 42, 72, 0.9);
   }
-}
 
-.navbar-list-all:before {
-  background-image: url('../img/icon-github.svg');
-}
+  &--all:before {
+    background-image: url('../img/icon-github.svg');
+  }
+  &--open:before {
+    background-image: url('../img/icon-open-issue.svg');
+  }
+  &--closed:before {
+    background-image: url('../img/icon-closed-issue.svg');
+  }
 
-.navbar-list-open:before {
-  background-image: url('../img/icon-open-issue.svg');
-}
+  &__name {
+    flex: 1;
+  }
 
-.navbar-list-closed:before {
-  background-image: url('../img/icon-closed-issue.svg');
-}
-
-.navbar-list-item-name {
-  flex: 1;
-}
-
-.navbar-list-item-count {
-  opacity: 0.7;
+  &__count {
+    opacity: 0.7;
+  }
 }
 
 /* Content */
@@ -124,9 +122,17 @@ body {
   padding: 0 11px;
   margin-bottom: 5px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
+  &__text {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 11px;
+  }
+
+  /* just for demo purposes*/
   &:first-child .icon-star {
     fill: #080606;
     stroke: #080606;

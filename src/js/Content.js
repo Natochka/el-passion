@@ -5,14 +5,12 @@ import IssueGroup from './IssueGroup'
 function Content() {
   return (
     <div className="content-wrapper">
-      {response.data.map((item, i) => {
-        return (
-          <div key={i} className="content-block">
-            <div className="content-date">{item.published}</div>
-            <IssueGroup data={item.data} />
-          </div>
-        )
-      })}
+      {response.data.map(item => (
+        <div key={item.published} className="content-block">
+          <div className="content-date">{item.published}</div>
+          <IssueGroup data={item.data} />
+        </div>
+      ))}
     </div>
   )
 }

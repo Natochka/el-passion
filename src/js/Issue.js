@@ -5,7 +5,7 @@ import StarIcon from './StarIcon'
 function Issue({ issue }) {
   return (
     <div className="issue">
-      <div>{issue}</div>
+      <div className="issue__text">{issue}</div>
       <StarIcon className="icon-star" />
     </div>
   )
